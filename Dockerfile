@@ -4,9 +4,9 @@ WORKDIR /opt/app
 
 COPY . .
 
-RUN python3 -m venv venv & \
-    source venv/bin/activate & \
-    pip3 install --no-cache-dir -r requirements-prod.txt
+RUN python3 -m venv venv
+RUN source venv/bin/activate
+RUN pip3 install --no-cache-dir -r requirements-prod.txt
     
 EXPOSE 5000
 
