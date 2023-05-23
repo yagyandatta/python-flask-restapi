@@ -8,7 +8,8 @@ appService = AppService();
 
 @app.route('/')
 def home():
-    return "App Working fine !!!"
+    print("Hello Cozentus")
+    return "App Working  Fine!!"
 
 
 @app.route('/api/tasks')
