@@ -8,7 +8,9 @@ appService = AppService();
 
 @app.route('/')
 def home():
-    return "App is Working Fine ::  Stable:Version !!"
+    deployment_number = os.environ.get('BUILD_NUMBER', 'Unknown')
+    return f"App is Working Fine!! (Deployment #{deployment_number})"
+    
 
 
 @app.route('/api/tasks')
