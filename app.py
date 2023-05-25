@@ -1,7 +1,7 @@
 from flask import Flask, request
 from app_service import AppService
 import json
-import os
+from datetime import datetime
 
 app = Flask(__name__)
 appService = AppService();
@@ -9,8 +9,8 @@ appService = AppService();
 
 @app.route('/')
 def home():
-    deployment_number = os.environ.get('BUILD_NUMBER', 'Unknown')
-    return f"App is Working Fine!! (Deployment #{deployment_number})"
+    current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return f"App is Working Fine :: Stable:Version !! (Deployment Time: {current_datetime})"
     
 
 
