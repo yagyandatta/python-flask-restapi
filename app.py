@@ -10,7 +10,7 @@ appService = AppService();
 @app.route('/')
 def home():
     current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    return f"App is Working Fine :: Stable:Version !! (Deployment Time: {current_datetime})"
+    return f"App is Working Fine!! (Deployment Time: {current_datetime})"
     
 
 
